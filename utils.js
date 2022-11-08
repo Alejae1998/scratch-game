@@ -32,4 +32,7 @@ export function renderCow(cow) {
     if (cow.starving === 3) {
         emojiEl.textContent = '💚';
     }
+
+    div.append(nameEl, emojiEl);
+    return div;
 }
