@@ -1,35 +1,145 @@
 :root {
-    --background: rgb(224, 234, 247);
-    --header-background: rgb(254, 251, 245);
-    --primary-font: Corbel, 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', 'DejaVu Sans',
-        'Bitstream Vera Sans', 'Liberation Sans', Verdana, 'Verdana Ref', sans-serif;
+    font-family: 'Games', sans-serif;
 }
 
-body {
-    font-family: var(--primary-font);
-    background: var(--background);
-    display: grid;
-    grid-template-rows: auto 1fr;
-}
-
-header {
-    position: sticky;
-    top: 0;
-    padding: 15px;
-    height: 80px;
-
+.farm-section {
+    background-color: white;
     display: flex;
-    align-items: center;
-    gap: 10px;
-
-    background-color: var(--header-background);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    flex-direction: row;
+    margin: 60px auto;
+    width: 80%;
+    padding: 25px;
+    font-family: 'Games', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 20px;
+    justify-content: space-between;
 }
-
-header .logo {
+body {
+    background-color: green;
+    width: 100%;
     height: 100%;
 }
 
-main {
+button,
+input {
+    font-family: 'Games', sans-serif;
+    padding: 5px;
+    line-height: 15px;
+    cursor: pointer;
+}
+
+.h1 {
+    background-color: white;
+    font-family: 'Games', sans-serif;
+    text-align: center;
+    font-size: 0.7rem;
+}
+form {
+    background-color: green;
     padding: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    padding: 10px;
+    text-align: center;
+    font-size: 0.6rem;
+}
+button {
+    font-size: 0.6rem;
+}
+.header-button:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(2deg);
+    background-color: antiquewhite;
+}
+
+.cow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
+}
+
+.cow .name {
+    font-size: 1.3rem;
+}
+
+.cow .emoji {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.cow:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(8deg);
+    background-color: #00ff00;
+}
+
+.berries {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/berries.png');
+}
+
+.grass {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('../assets/grass.png');
+}
+
+.cow-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 45%;
+}
+
+.farmer-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 45%;
+}
+
+.cow-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.cow-name p {
+    padding 10px;
+}
+
+#fed-cows #farmer {
+//background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    line-height: 20px;
 }
