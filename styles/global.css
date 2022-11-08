@@ -50,3 +50,47 @@ input {
 button {
     font-size: 0.6rem;
 }
+
+.cow {
+    background-color: skyblue;
+    border: solid 1px black;
+    margin: 5px;
+    border-radius: 20px;
+    height: 100px;
+    width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cow .name {
+    font-size: 1.3rem;
+}
+
+.cow .emoji {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.cow:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(8deg);
+    background-color: lightblue;
+}
+
+.berries {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-image: url('../assets/berries.png');
+}
+
+.grass {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-image: url('../assets/grass.png');
+}
