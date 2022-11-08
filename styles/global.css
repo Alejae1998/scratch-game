@@ -26,6 +26,7 @@ input {
     font-family: 'Games', sans-serif;
     padding: 5px;
     line-height: 15px;
+    cursor: pointer;
 }
 
 .h1 {
@@ -49,6 +50,13 @@ input {
 }
 button {
     font-size: 0.6rem;
+}
+.header-button:hover {
+    transition: all 0.1s ease-in-out;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transform: rotate(2deg);
+    background-color: antiquewhite;
 }
 
 .cow {
