@@ -45,28 +45,33 @@ function displayMice() {
     }
 }
 
-function miceClickHandler(mouseData) {
-    if (mouseData.hp <= 0) return;
-    if (Math.random() < 0.33) {
-        mouseData.hp--;
-        alert('you trapped' + mouseData.name);
+function miceClickHandler(mice) {
+    if (mice.hp === 0) return;
+    if (playerHp === 0) return;
+    const tomHit = Math.random();
+    if (tomHit < 0.5) {
+        mice.hp--;
+        displayMice();
+        alert(`You have trapped ${mice.name}!`);
+        if (mice.hp === 0) {
+            defeatedMiceCount++;
+            defeatedNumber.textContent = defeatedMiceCount;
+        }
     } else {
-        alert('you tried to trapped' + mouseData.name + 'but he was faster than you');
+        alert(`you tried to trapped ${mice.name}, but he was faster than you!`);
     }
-    if (Math.random() < 0.5) {
+
+    const miceHit = Math.random();
+    if (miceHit < 0.5) {
         playerHp--;
-        alert(mouseData.name + 'trapped you');
+        catHPEl.textContent = playerHp;
+        alert(`${mice.name} has trapped you!`);
+        if (playerHp === 0) {
+            alert('GAME OVER');
+        }
     } else {
-        alert(mouseData.name + 'tried to trapped you but you where faster 😮‍💨');
+        alert(`hurry ${mice.name} trapped you`);
     }
-
-    if (playerHp === 0) {
-        catImg.classList.add('game-over');
-        alert('GAME OVER!!!');
-    }
-
-    catHPEl.textContent = playerHp;
-    defeatedNumber.textContent = defeatedMiceCount;
-
-    const hpEl = document.getElementById;
 }
+
+displayMice();
