@@ -60,16 +60,17 @@ button {
 }
 
 .cow {
-    background-color: skyblue;
-    border: solid 1px black;
-    margin: 5px;
-    border-radius: 20px;
-    height: 100px;
-    width: 120px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+
+    cursor: pointer;
 }
 
 .cow .name {
@@ -86,13 +87,14 @@ button {
     cursor: pointer;
     box-shadow: var(--shadow);
     transform: rotate(8deg);
-    background-color: lightblue;
+    background-color: #00ff00;
 }
 
 .berries {
     width: 100px;
     height: 100px;
     background-size: contain;
+    background-repeat: no-repeat;
     background-image: url('../assets/berries.png');
 }
 
@@ -100,5 +102,44 @@ button {
     width: 100px;
     height: 100px;
     background-size: contain;
+    background-repeat: no-repeat;
     background-image: url('../assets/grass.png');
+}
+
+.cow-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 45%;
+}
+
+.farmer-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 45%;
+}
+
+.cow-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+}
+
+.cow-name p {
+    padding 10px;
+}
+
+#fed-cows #farmer {
+//background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    line-height: 20px;
 }
