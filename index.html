@@ -27,53 +27,38 @@
 
     <body>
         <header>
-            <h1><span aria-hidden="true">👩🏻‍🌾🐮</span>Farmer: Feed our cows</h1>
+            <h1><span aria-hidden="true"></span>Tom & Jerry fight</h1>
         </header>
 
         <main>
             <section class="farm-section">
-                <div class="farmer-stats">
-                    <button class="header-button" id="add-berrie-button">
-                        Feed your cow with Berries
-                    </button>
-                    <em>
-                        <button class="header-button" id="add-grass-button">
-                            feed you cow with some Grass
-                        </button>
-                    </em>
-                    <div class="fed-cows">
-                        <p>You have fed<span id="fed-number">0</span> cows</p>
-                        <div class="fed-list"></div>
+                <div class="left">
+                    <div class="defeated">
+                        <p>You have defeated <span id="defeat-number">0</span>Mice</p>
                     </div>
-                    <div class="farmer">
+                    <div id="farmer">
                         <p>
-                            Cow starving level:
-                            <span id="farmer-hp">3</span>
+                            You HP
+                            <span id="farmer-hp">10</span>More lives
                         </p>
                         <img
-                            id="cow-img"
-                            src="./assets/cow.png"
+                            id="tom-img"
+                            src="./assets/tom.png"
                             width="250px"
-                            alt="animation of a cow"
+                            alt="animation of a cat"
                         />
                     </div>
                 </div>
-                <div class="berries"></div>
-                <div class="grass"></div>
-                <div class="cow-stats">
-                    <form>
-                        <label for="cow-name">Name of the new cow:</label>
-                        <input
-                            name="cow-name"
-                            id="cow-name"
-                            type="text"
-                            placeholder="e.g Brownie"
-                        />
-                        <button class="add-cow-button" type="submit">
-                            New cow <span aria-hidden="true">🐮</span>
-                        </button>
-                    </form>
-                    <div class="cow"></div>
+                
+                <div class="right">
+                    <div class="new-mouse">
+                        <form id="mouse-form">
+                            <input type="text" name="mouse-name" id="mouse-name-input" placeholder="NAME A NEW MOUSE">
+                            <button>CHALLENGE<br>TOM</button>
+                        </form>
+                        <div class="toms">archie enemies</div>
+                    </div>
+                </div>
                 </div>
             </section>
         </main>

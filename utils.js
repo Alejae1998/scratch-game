@@ -1,38 +1,20 @@
-export function renderBerries() {
-    const div = document.createElement('div');
-    div.classList.add('berries');
-
-    return div;
-}
-
-export function renderGrass() {
-    const div = document.createElement('div');
-    div.classList.add('grass');
-}
-
-export function renderCow(cow) {
-    const div = document.createElement('div');
+export function renderJerry(mouseData) {
+    const mouseEl = document.createElement('div');
+    const faceEl = document.createElement('p');
     const nameEl = document.createElement('p');
-    const emojiEl = document.createElement('p');
+    const hpEl = document.createElement('p');
+    mouseEl.classList.add('mouse');
 
-    div.classList.add('cow');
-    nameEl.classList.add('name');
-    emojiEl.classList.add('emoji');
+    nameEl.textContent = mouseData.name;
+    hpEl.id = `mouse-hp-${mouseData.id}`;
+    hpEl.textContent = mouseData.hp < 0 ? 0 : mouseData.hp;
 
-    nameEl.textContent = cow.name;
-
-    if (cow.starving === 1) {
-        emojiEl.textContent = '🐮';
+    faceEl.id = `mouse-face-${mouseData.id}`;
+    faceEl.textContent = mouseData.hp > 0 ? '🐭' : '🪤';
+    if (mouseData.hp < 0) {
+        mouseEl.classList.add('trapped');
     }
 
-    if (cow.starving === 2) {
-        emojiEl.textContent = '🐄';
-    }
-
-    if (cow.starving === 3) {
-        emojiEl.textContent = '💚';
-    }
-
-    div.append(nameEl, emojiEl);
-    return div;
+    mouseEl.append(nameEl, faceEl, hpEl);
+    return mouseEl;
 }
